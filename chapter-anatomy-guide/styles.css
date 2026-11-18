@@ -1301,3 +1301,70 @@ body.a11y-highlight :is(a, button) { text-decoration: underline 3px; text-underl
   .guide-back { top: 10px; inset-inline: 12px auto; }
   .anatomy-only #chapter-anatomy { padding-top: 82px; }
 }
+
+/* Phone and tablet chapter map: keep the rings, move the wording into one caption. */
+.growth-orbit { display: contents; }
+.growth-mobile-caption { display: none; }
+@media (max-width: 900px) {
+  .guide-back { position: absolute; }
+  .chapter-growth-stage { display: block; min-height: 0; padding: 24px 14px 14px; }
+  .chapter-growth.show-sequence .chapter-growth-stage { padding: 0; border: 0; }
+  .growth-orbit { position: relative; display: block; width: min(100%, 430px); aspect-ratio: 1; margin: 0 auto; }
+  .growth-ring { display: block; }
+  .chapter-growth-stage .growth-ring-inner { width: 62%; height: 62%; }
+  .chapter-growth-stage .growth-ring-outer { width: 92%; height: 92%; }
+  .growth-ring span { top: -13px; padding: 3px 10px; font-size: 12px; }
+
+  .chapter-growth-stage .growth-core {
+    position: absolute; inset: auto; left: 50%; top: 50%;
+    width: 38%; min-height: 0; padding: 10px 6px; gap: 3px; border-radius: 18px;
+    transform: translate(-50%, -50%) scale(.72);
+  }
+  .chapter-growth-stage .growth-core.is-visible { transform: translate(-50%, -50%) scale(1); }
+  .chapter-growth-stage .growth-core strong { font-size: clamp(19px, 6vw, 27px); }
+  .chapter-growth-stage .growth-core span { font-size: 12px; line-height: 1.25; }
+
+  .chapter-growth-stage .growth-node,
+  .chapter-growth-stage .growth-branch {
+    position: absolute; inset: auto; left: var(--mx); top: var(--my); z-index: 3;
+    display: grid; place-items: center;
+    width: 36px; height: 36px; min-height: 0; padding: 0;
+    border-radius: 50%; outline: 0;
+    background: var(--mist); color: var(--slate);
+    box-shadow: inset 0 0 0 1px rgba(20, 54, 94, .22);
+    font-size: 0; opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: background-color .3s var(--ease), color .3s var(--ease), box-shadow .3s var(--ease), transform .3s var(--ease);
+  }
+  .chapter-growth-stage .growth-node::before,
+  .chapter-growth-stage .growth-branch::before {
+    content: attr(data-dot); position: static; display: block;
+    width: auto; height: auto; background: none; transform: none;
+    font-size: 14px; font-weight: 800; line-height: 1;
+  }
+  .chapter-growth-stage .growth-node > *,
+  .chapter-growth-stage .growth-branch > * {
+    position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden;
+    clip-path: inset(50%); white-space: nowrap;
+  }
+  .chapter-growth-stage .growth-question.is-visible { background: #315b88; color: #fff; box-shadow: none; }
+  .chapter-growth-stage .growth-amora.is-visible { background: var(--navy); color: #fff; box-shadow: none; }
+  .chapter-growth-stage .growth-branch-halakha.is-visible { background: #dfe9f3; color: var(--navy); box-shadow: inset 0 0 0 1px rgba(20, 54, 94, .35); }
+  .chapter-growth-stage .growth-branch-aggadah.is-visible { background: #fff1e8; color: #85442f; box-shadow: inset 0 0 0 1px rgba(133, 68, 47, .45); }
+  .chapter-growth-stage .growth-node.is-current,
+  .chapter-growth-stage .growth-branch.is-current {
+    z-index: 4; box-shadow: 0 0 0 4px var(--accent-light);
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  .growth-mobile-caption {
+    display: grid; align-content: start; gap: 5px;
+    width: min(100%, 430px); min-height: 138px; margin: 16px auto 0; padding: 15px 16px;
+    border-radius: var(--r-tile); background: #fffaf4;
+    box-shadow: inset 0 0 0 1.5px var(--accent-light); color: var(--navy);
+  }
+  .growth-mobile-caption small { color: #85442f; font-size: 13px; font-weight: 700; line-height: 1.35; }
+  .growth-mobile-caption strong { font-size: 20px; font-weight: 900; line-height: 1.25; }
+  .growth-mobile-caption p { margin: 0; color: var(--slate); font-size: 15px; line-height: 1.5; }
+  .growth-mobile-caption p:empty { display: none; }
+}

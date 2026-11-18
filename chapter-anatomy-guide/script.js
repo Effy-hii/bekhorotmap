@@ -1018,12 +1018,68 @@ if (chapterGrowthStage && chapterSequenceStage && chapterGrowth && chapterGrowth
     }, step === 25 ? 850 : 260);
   };
 
+  const growthOrbit = document.createElement("div");
+  growthOrbit.className = "growth-orbit";
+  growthOrbit.append(...chapterGrowthStage.querySelectorAll(".growth-ring, .growth-core, .growth-node, .growth-branch"));
+  chapterGrowthStage.prepend(growthOrbit);
+
+  const growthCaption = document.createElement("div");
+  growthCaption.className = "growth-mobile-caption";
+  growthCaption.setAttribute("aria-hidden", "true");
+  const growthCaptionKicker = growthCaption.appendChild(document.createElement("small"));
+  const growthCaptionTitle = growthCaption.appendChild(document.createElement("strong"));
+  const growthCaptionCopy = growthCaption.appendChild(document.createElement("p"));
+  chapterGrowthStage.append(growthCaption);
+
+  const growthQuestions = [...growthOrbit.querySelectorAll(".growth-question")];
+  const growthAmoraim = [...growthOrbit.querySelectorAll(".growth-amora")];
+  const growthBranches = [...growthOrbit.querySelectorAll(".growth-branch")];
+  const placeGrowthDot = (piece, number, x, y) => {
+    piece.dataset.dot = String(number);
+    piece.style.setProperty("--mx", `${x}%`);
+    piece.style.setProperty("--my", `${y}%`);
+  };
+  const placeGrowthDotOnRing = (piece, number, angle, radius) => {
+    const radians = angle * Math.PI / 180;
+    placeGrowthDot(piece, number, 50 + radius * Math.sin(radians), 50 - radius * Math.cos(radians));
+  };
+  growthQuestions.forEach((piece, index) => placeGrowthDotOnRing(piece, index + 1, 30 + index * 60, 31));
+  growthAmoraim.forEach((piece, index) => placeGrowthDotOnRing(piece, index + 7, [60, 180, 300][index], 46));
+  growthBranches.forEach((piece, index) => placeGrowthDot(piece, index + 10, index === 0 ? 91 : 9, 91));
+
+  const syncGrowthCaption = () => {
+    growthPieces.forEach(piece => piece.classList.toggle("is-current", Number(piece.dataset.growthStep) === currentGrowthStep));
+    const piece = growthPieces.find(item => Number(item.dataset.growthStep) === currentGrowthStep
+      && growthOrbit.contains(item) && !item.classList.contains("growth-ring"));
+    if (!piece) return;
+    let kicker = "נקודת המוצא של הפרק";
+    let title = "המשנה";
+    let copy = "לחצו על ״הבא״ כדי לראות כיצד הפרק נבנה סביבה.";
+    if (piece.classList.contains("growth-question")) {
+      kicker = `בירור המשנה · שאלה ${growthQuestions.indexOf(piece) + 1} מתוך ${growthQuestions.length}`;
+      title = piece.textContent.trim();
+      copy = "";
+    } else if (piece.classList.contains("growth-amora")) {
+      kicker = `הרחבת האמוראים · ${growthAmoraim.indexOf(piece) + 1} מתוך ${growthAmoraim.length}`;
+      title = piece.querySelector("strong").textContent.trim();
+      copy = "";
+    } else if (piece.classList.contains("growth-branch")) {
+      kicker = `הסתעפות · ${piece.querySelector("small").textContent.trim()}`;
+      title = piece.querySelector("strong").textContent.trim();
+      copy = piece.querySelector("p").textContent.trim();
+    }
+    growthCaptionKicker.textContent = kicker;
+    growthCaptionTitle.textContent = title;
+    growthCaptionCopy.textContent = copy;
+  };
+
   const updateGrowthControls = () => {
     const complete = currentGrowthStep >= maxGrowthStep;
     nextChapterGrowth.disabled = complete;
     previousChapterGrowth.disabled = currentGrowthStep === 0;
     nextChapterGrowth.innerHTML = complete ? "התרשים הושלם" : `הבא ${arrowForward}`;
     chapterGrowthStatus.textContent = `${growthStepLabels[currentGrowthStep]} · שלב ${currentGrowthStep + 1} מתוך ${maxGrowthStep + 1}`;
+    syncGrowthCaption();
   };
 
   const resetChapterGrowth = () => {
@@ -1039,6 +1095,7 @@ if (chapterGrowthStage && chapterSequenceStage && chapterGrowth && chapterGrowth
     growthPieces.forEach(piece => piece.classList.toggle("is-visible", Number(piece.dataset.growthStep) === 0));
     currentGrowthStep = 0;
     updateFloatingGrowthControls();
+    syncGrowthCaption();
     nextChapterGrowth.disabled = false;
     previousChapterGrowth.disabled = true;
     void chapterGrowthStage.offsetWidth;
