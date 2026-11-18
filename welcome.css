@@ -1,0 +1,26 @@
+html{scrollbar-gutter:stable}
+html:has(.welcome-dialog[open]){overflow:hidden}
+.welcome-dialog{width:min(640px,calc(100% - 32px));max-width:none;max-height:calc(100dvh - 32px);padding:0;border:0;border-radius:30px;overflow:hidden;box-shadow:0 25px 75px #102e5250;color:var(--navy);font-family:inherit}
+.welcome-dialog::backdrop{background:#102e5280}
+.welcome-inner{position:relative;max-height:calc(100dvh - 32px);overflow-y:auto;padding:clamp(26px,4vw,42px);scrollbar-color:var(--navy) var(--mist)}
+.welcome-close{position:absolute;top:16px;left:16px;display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:50%;background:var(--mist);color:var(--navy);font:inherit;font-size:27px;line-height:1;cursor:pointer}
+.welcome-close:hover,.welcome-close:focus-visible{background:#e4eaf2;outline:2px solid var(--navy);outline-offset:2px}
+.welcome-dialog .eyebrow{margin:0 0 10px;padding-inline-end:50px;color:#8f5c35}
+.welcome-dialog h2{margin:0;padding-inline-end:38px;font-size:clamp(31px,5vw,44px);font-weight:400;line-height:1.14;letter-spacing:-.025em}
+.welcome-dialog h2:focus{outline:0}
+.welcome-dialog h2 strong{display:block;font-weight:900}
+.welcome-lead{margin:13px 0 24px;color:var(--muted);font-size:clamp(17px,2.2vw,19px);line-height:1.5}
+.welcome-paths{display:grid;gap:10px}
+.welcome-path{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:104px;padding:17px 20px;border-radius:20px;background:var(--mist);color:var(--navy);text-decoration:none;transition:background-color .16s ease}
+.welcome-path:hover{background:#e4eaf2}
+.welcome-path:focus-visible{background:#e4eaf2;outline:3px solid var(--navy);outline-offset:2px}
+.welcome-path-copy{display:grid;gap:4px;min-width:0}
+.welcome-path-copy strong{font-size:clamp(20px,2.6vw,23px);font-weight:900;line-height:1.2}
+.welcome-path-copy span{color:var(--muted);font-size:16px;line-height:1.45}
+.welcome-path-copy small{margin-top:3px;color:#8f5c35;font-size:14px;font-weight:700}
+.welcome-path-arrow{display:grid;flex:none;place-items:center;width:42px;height:42px;border-radius:50%;background:#fff;font-size:20px;transition:background-color .16s ease,color .16s ease}
+.welcome-path:hover .welcome-path-arrow,.welcome-path:focus-visible .welcome-path-arrow{background:var(--navy);color:#fff}
+.welcome-continue{display:block;min-height:44px;margin:16px auto 0;padding:9px 18px;border:0;border-radius:999px;background:none;color:var(--navy);font:inherit;font-size:16px;font-weight:700;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.welcome-continue:hover,.welcome-continue:focus-visible{background:var(--mist);outline:2px solid var(--navy);outline-offset:2px}
+@media(max-width:520px){.welcome-dialog{width:calc(100% - 20px);max-height:calc(100dvh - 20px);border-radius:24px}.welcome-inner{max-height:calc(100dvh - 20px);padding:24px 18px 18px}.welcome-close{top:12px;left:12px}.welcome-lead{margin-bottom:18px}.welcome-path{gap:10px;min-height:0;padding:14px 15px}.welcome-path-copy span{font-size:15px}.welcome-path-arrow{width:36px;height:36px}}
+@media(prefers-reduced-motion:reduce){.welcome-path,.welcome-path-arrow{transition:none}}

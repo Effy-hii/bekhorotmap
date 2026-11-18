@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="temple-map.css">
   <link rel="stylesheet" href="summary.css">
   <link rel="stylesheet" href="standalone.css">
+  <link rel="stylesheet" href="welcome.css">
 </head>
 <body>
   <a class="skip-link" href="#main">דלג לתוכן</a>
@@ -385,6 +386,20 @@
       </section>
     </main>
   </div>
+  <dialog class="welcome-dialog" id="welcome-dialog" aria-labelledby="welcome-title" aria-describedby="welcome-lead">
+    <div class="welcome-inner">
+      <button class="welcome-close" type="button" data-welcome-close aria-label="סגירת החלון">×</button>
+      <p class="eyebrow">מסע במסכת בכורות</p>
+      <h2 id="welcome-title" tabindex="-1" autofocus>מה מביא אתכם <strong>למסכת בכורות?</strong></h2>
+      <p class="welcome-lead" id="welcome-lead">בחרו את נקודת הכניסה שמתאימה לכם, ונוביל אתכם ישר אליה.</p>
+      <nav class="welcome-paths" aria-label="נקודות כניסה למסע">
+          <a class="welcome-path" href="#opening" data-welcome-target="opening"><span class="welcome-path-copy"><strong>מתחילים את המסכת</strong><span>תמונה כוללת לפני הדף הראשון: על מה המסכת, מאילו פסוקים היא יוצאת וכיצד היא בנויה.</span><small>לתחנה 01 · פתיחה</small></span><span class="welcome-path-arrow" aria-hidden="true">←</span></a>
+          <a class="welcome-path" href="#summary" data-welcome-target="summary"><span class="welcome-path-copy"><strong>מסכמים את המסכת</strong><span>כל תשעת הפרקים, הנושאים והסוגיות במבט אחד.</span><small>לתחנה 09 · מפת המסע השלמה</small></span><span class="welcome-path-arrow" aria-hidden="true">←</span></a>
+          <a class="welcome-path" href="#chapter-expansion" data-welcome-target="chapter-expansion"><span class="welcome-path-copy"><strong>רוצים להעמיק</strong><span>הקשרים בין הנושאים, עולם האגדה ומקומה של המסכת ברמב״ם.</span><small>לתחנה 06 · הרחבות פרק ד׳</small></span><span class="welcome-path-arrow" aria-hidden="true">←</span></a>
+      </nav>
+      <button class="welcome-continue" type="button" data-welcome-close>המשך לכל המסע</button>
+    </div>
+  </dialog>
   <script src="verses-data.js"></script>
   <script src="render-verses.js"></script>
   <script src="stages.js"></script>
@@ -398,5 +413,6 @@
   <script src="temple-map.js"></script>
   <script src="summary-data.js"></script>
   <script src="summary.js"></script>
+  <script src="welcome.js"></script>
 </body>
 </html>
