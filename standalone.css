@@ -1,0 +1,16 @@
+.standalone-intro-note{max-width:680px;margin:12px auto 0;color:var(--muted);font-size:16px;line-height:1.6}
+.standalone-explainer{width:min(680px,calc(100% - 28px));max-height:min(90vh,760px);padding:0;border:0;border-radius:28px;color:var(--navy);box-shadow:0 20px 70px #0d284a4d}
+.standalone-explainer::backdrop{background:#0b254570}
+.standalone-explainer-inner{position:relative;padding:clamp(26px,5vw,48px)}
+.standalone-explainer-close{position:absolute;top:18px;left:18px;display:grid;place-items:center;width:42px;height:42px;border:0;border-radius:50%;background:var(--mist);color:var(--navy);font:30px Rubik,Arial,sans-serif;cursor:pointer}
+.standalone-explainer h2{padding-inline-start:40px;font-size:clamp(28px,3vw,38px);line-height:1.18}
+.standalone-explainer p:not(.eyebrow){margin-top:20px;color:var(--muted);font-size:18px;line-height:1.75}
+.standalone-explainer a{display:inline-flex;gap:8px;margin-top:24px;color:var(--navy);font-weight:800;text-underline-offset:4px}
+.standalone-contact{max-width:1000px;margin:60px auto 35px;padding:clamp(28px,5vw,60px);border-radius:34px;background:var(--navy);color:#fff;text-align:center;scroll-margin-top:24px}
+.standalone-contact .eyebrow{color:var(--peach)}
+.standalone-contact h2{font-size:clamp(30px,4vw,48px);line-height:1.2}
+.standalone-contact>p:not(.eyebrow){max-width:660px;margin:15px auto 0;color:#dce7f2;font-size:18px;line-height:1.65}
+.standalone-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:54px;margin-top:27px;padding:14px 27px;border-radius:999px;background:#fff;color:var(--navy);font-size:18px;font-weight:900;text-decoration:none}
+.standalone-whatsapp:hover,.standalone-whatsapp:focus-visible{background:#e8eef5;outline:3px solid var(--peach);outline-offset:3px}
+@media(max-width:600px){.standalone-intro-note{font-size:15px}.standalone-explainer-inner{padding:27px 23px}.standalone-explainer p:not(.eyebrow){font-size:16px}.standalone-contact{margin:45px auto 20px;border-radius:26px}.standalone-contact>p:not(.eyebrow){font-size:16px}.standalone-whatsapp{width:100%;font-size:16px}}
+@media(max-width:520px){.side-nav{inset-inline-start:8px;inset-inline-end:8px;transform:none;display:flex;justify-content:flex-start;max-width:calc(100% - 16px);overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;scrollbar-width:none}.side-nav::-webkit-scrollbar{display:none}.side-nav a{flex:0 0 42px;scroll-snap-align:center}}

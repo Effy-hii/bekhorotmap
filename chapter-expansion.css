@@ -1,0 +1,32 @@
+.chapter-expansion{max-width:1450px;margin:85px auto 40px;padding:75px 0 60px;border-top:1px solid #dce5ee;scroll-margin-top:24px}
+.chapter-expansion-heading{max-width:1130px;margin-bottom:38px}
+.chapter-expansion-heading h2{color:var(--navy);font-size:clamp(40px,4.8vw,70px);font-weight:400;line-height:1.12;letter-spacing:-.03em}
+.chapter-expansion-heading h2 strong{font-weight:900}
+.chapter-expansion-heading>p:last-child{margin-top:16px;color:var(--muted);font-size:clamp(18px,1.5vw,23px);line-height:1.6}
+.chapter-expansion-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:clamp(25px,4vw,60px);align-items:start}
+.chapter-expansion-topics{display:grid;gap:12px}
+.chapter-expansion-topic{position:relative;display:grid;grid-template-columns:38px minmax(0,1fr) 48px;align-items:center;gap:15px;width:100%;min-height:113px;padding:17px 20px;border:2px solid transparent;border-radius:27px;background:#fff;color:var(--navy);font:inherit;text-align:right;cursor:pointer;transition:background .22s ease,border-color .22s ease,transform .22s ease}
+.chapter-expansion-topic:hover,.chapter-expansion-topic:focus-visible{background:var(--mist);outline:none}
+.chapter-expansion-topic:focus-visible{border-color:#a65f3d}
+.chapter-expansion-topic.is-active{background:var(--mist);border-color:#dce5ee}
+.chapter-expansion-topic.is-active::before{content:"";position:absolute;inset-inline-start:0;top:18px;bottom:18px;width:5px;border-radius:5px;background:#a65f3d}
+.chapter-expansion-topic-number{align-self:start;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#e8eef5;color:var(--navy);font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.chapter-expansion-topic.is-active .chapter-expansion-topic-number{background:#f2d0c3}
+.chapter-expansion-topic-copy{display:grid;gap:7px;min-width:0}
+.chapter-expansion-topic-copy strong{font-size:clamp(21px,2vw,29px);font-weight:900;line-height:1.2}
+.chapter-expansion-topic-copy small{color:var(--muted);font-size:16px;line-height:1.5}
+.chapter-expansion-topic-arrow{display:grid;place-items:center;width:47px;height:47px;border-radius:50%;background:var(--mist);font-size:24px;line-height:1}
+.chapter-expansion-topic.is-active .chapter-expansion-topic-arrow{background:#f2d0c3}
+.chapter-expansion-visual{display:grid;align-content:start;gap:25px;min-width:0;margin:0;padding:clamp(25px,3vw,42px);border-radius:35px;background:var(--navy);color:#fff;scroll-margin-top:24px}
+.chapter-expansion-image-frame{width:100%;aspect-ratio:3/2;overflow:hidden;border-radius:28% / 23%;background:#0e2c4d}
+.chapter-expansion-image-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.chapter-expansion-image-frame img.is-changing{animation:chapter-expansion-photo .38s ease both}
+.chapter-expansion-visual figcaption{display:grid;gap:6px;text-align:right}
+.chapter-expansion-caption-location{color:var(--peach);font-size:15px;font-weight:800}
+.chapter-expansion-visual figcaption strong{font-size:clamp(23px,2.3vw,33px);font-weight:900;line-height:1.2}
+.chapter-expansion-visual figcaption p{color:#dce7f2;font-size:17px;line-height:1.55}
+.chapter-expansion>.next-station{margin-top:38px}
+@keyframes chapter-expansion-photo{from{opacity:.35;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}
+@media(max-width:950px){.chapter-expansion-layout{grid-template-columns:1fr}.chapter-expansion-visual{width:100%}.chapter-expansion-image-frame{max-height:480px}}
+@media(max-width:600px){.chapter-expansion{margin-top:60px;padding-top:55px}.chapter-expansion-heading{margin-bottom:24px}.chapter-expansion-topic{grid-template-columns:32px minmax(0,1fr) 39px;gap:10px;min-height:98px;padding:14px;border-radius:22px}.chapter-expansion-topic-number{width:30px;height:30px;font-size:13px}.chapter-expansion-topic-copy strong{font-size:20px}.chapter-expansion-topic-copy small{font-size:14px}.chapter-expansion-topic-arrow{width:38px;height:38px;font-size:21px}.chapter-expansion-visual{gap:18px;padding:22px;border-radius:26px}.chapter-expansion-visual figcaption p{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.chapter-expansion-topic{transition:none}.chapter-expansion-image-frame img.is-changing{animation:none}}
