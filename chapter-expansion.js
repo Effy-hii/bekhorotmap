@@ -5,6 +5,7 @@
   const title = document.getElementById('chapter-expansion-caption-title');
   const copy = document.getElementById('chapter-expansion-caption-copy');
   const buttons = [...document.querySelectorAll('[data-expansion-topic]')];
+  const previews = [...document.querySelectorAll('[data-expansion-preview]')];
   if (!station || !image || !visual || !title || !copy || buttons.length !== 4) return;
 
   const topics = {
@@ -35,13 +36,17 @@
   };
 
   let active = 'mistake';
-  buttons.forEach(button => button.addEventListener('click', () => {
-    const key = button.dataset.expansionTopic;
+  const selectTopic = (key, scrollToVisual) => {
     const topic = topics[key];
     if (!topic || key === active) return;
     active = key;
     buttons.forEach(item => {
-      const selected = item === button;
+      const selected = item.dataset.expansionTopic === key;
+      item.classList.toggle('is-active', selected);
+      item.setAttribute('aria-pressed', String(selected));
+    });
+    previews.forEach(item => {
+      const selected = item.dataset.expansionPreview === key;
       item.classList.toggle('is-active', selected);
       item.setAttribute('aria-pressed', String(selected));
     });
@@ -54,13 +59,15 @@
       void image.offsetWidth;
       image.classList.add('is-changing');
     }
-    if (window.matchMedia('(max-width: 950px)').matches) {
+    if (scrollToVisual && window.matchMedia('(max-width: 950px)').matches) {
       visual.scrollIntoView({
         behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
         block: 'start'
       });
     }
-  }));
+  };
+  buttons.forEach(button => button.addEventListener('click', () => selectTopic(button.dataset.expansionTopic, true)));
+  previews.forEach(button => button.addEventListener('click', () => selectTopic(button.dataset.expansionPreview, false)));
 
   const preload = () => Object.values(topics).slice(1).forEach(topic => {
     const preview = new Image();
