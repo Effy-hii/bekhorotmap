@@ -12,7 +12,7 @@ for (const reference of references) {
     if (!ids.has(reference.slice(1))) errors.push(`Missing anchor: ${reference}`);
     continue;
   }
-  if (/^https?:\/\//.test(reference)) continue;
+  if (/^(?:https?:\/\/|data:)/.test(reference)) continue;
   const file = reference.split(/[?#]/)[0];
   if (!fs.existsSync(path.join(root, file))) errors.push(`Missing file: ${file}`);
 }
@@ -34,6 +34,10 @@ for (const match of expansion.matchAll(/\bsrc: '([^']+)'/g)) {
 
 const stationCount = [...html.matchAll(/\bdata-screen\b/g)].length;
 if (stationCount !== 9) errors.push(`Expected 9 stations, found ${stationCount}`);
+if (!html.includes('id="firstborn-hero-image"') || !references.includes('firstborn-inline.js')) errors.push('Missing embedded firstborn illustration');
+const embeddedImage = fs.readFileSync(path.join(root, 'firstborn-inline.js'), 'utf8');
+const sourceImage = fs.readFileSync(path.join(root, 'firstborn-hero.webp')).toString('base64');
+if (!embeddedImage.includes(sourceImage)) errors.push('Embedded firstborn illustration differs from its source image');
 if (!references.includes('https://wa.me/972536228498')) errors.push('Missing WhatsApp contact link');
 if (references.some(reference => reference.startsWith('../'))) errors.push('A link still points outside this site');
 
