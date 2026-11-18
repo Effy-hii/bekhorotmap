@@ -2,7 +2,6 @@
   const button = document.getElementById("toggle-tithe");
   const layout = document.getElementById("topic-layout");
   const tithePanel = document.getElementById("tithe-panel");
-  const titheVerses = document.querySelector(".verse-group--tithe");
   const closingLine = document.getElementById("closing-line");
   const title = document.getElementById("page-title");
   const lead = document.getElementById("intro-lead");
@@ -12,7 +11,6 @@
     const isOpen = button.getAttribute("aria-expanded") === "true";
     const nextOpen = !isOpen;
     tithePanel.hidden = !nextOpen;
-    if (titheVerses) titheVerses.hidden = !nextOpen;
     if (closingLine) closingLine.hidden = !nextOpen;
     layout.classList.toggle("tithe-visible", nextOpen);
     button.setAttribute("aria-expanded", String(nextOpen));

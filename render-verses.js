@@ -36,7 +36,6 @@
   for (const group of groups) {
     const section = document.createElement("section");
     section.className = `verse-group verse-group--${group.key}`;
-    if (group.key === "tithe") section.hidden = true;
     section.setAttribute("aria-labelledby", `verses-${group.key}`);
     const header = document.createElement("div");
     header.className = "verse-group-heading";
