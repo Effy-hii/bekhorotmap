@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="מדריך חזותי להבנת הדרך שבה משנה, דיון והרחבות מצטרפים לפרק בתלמוד">
+  <title>איך פרק בגמרא נבנה? · הנותן בים דרך</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="anatomy-only">
+  <a class="skip-link" href="#main">דלג לתוכן</a>
+  <a class="guide-back" href="../index.html#related-topic">חזרה למבוא מסכת בכורות</a>
+
+  <nav class="side-nav" aria-label="ניווט במסע">
+    <a href="#opening" data-section="opening"><span>01</span><b>פתיחה</b></a>
+    <a href="#torah-sources" data-section="torah-sources"><span>02</span><b>פסוקי התורה</b></a>
+    <a href="#journey" data-section="journey"><span>03</span><b>נושאי המסכת</b></a>
+    <a href="#chapters" data-section="chapters"><span>04</span><b>מן הנושאים לפרקים</b></a>
+    <a href="#chapter-anatomy" data-section="chapter-anatomy"><span>05</span><b>מבנה פרק</b></a>
+    <a href="#cross-themes" data-section="cross-themes"><span>06</span><b>נושאי רוחב</b></a>
+    <a href="#aggadah" data-section="aggadah"><span>07</span><b>אגדה</b></a>
+    <a href="#summary" data-section="summary"><span>08</span><b>סיכום</b></a>
+  </nav>
+
+  <main id="main">
+    <section id="opening" class="hero-screen" data-screen>
+      <div class="hero-list">
+        <header class="topbar">
+          <a class="brand" href="#opening" aria-label="הנותן בים דרך · חזרה לפתיחה">
+            <svg class="brand-mark" viewBox="0 0 46 46" aria-hidden="true" focusable="false">
+              <circle cx="23" cy="23" r="23" fill="#14365e"></circle>
+              <path d="M16.5 38c1.8-7.6 4.3-15.6 6.5-24 2.2 8.4 4.7 16.4 6.5 24z" fill="#fff"></path>
+              <circle cx="23" cy="11" r="3.2" fill="var(--site-accent-light)"></circle>
+            </svg>
+            <span class="brand-copy"><span class="brand-name">הנותן בים דרך</span><span class="brand-sub">מסע במסכת חולין</span></span>
+          </a>
+          <p class="chapter-counter"><b>י״ב</b> פרקים · מסע אחד</p>
+        </header>
+
+        <div class="hero-copy">
+          <h1>מה צריך לברר <strong>לפני שאוכלים?</strong></h1>
+          <p class="lead">מסע חזותי להכרת מבנה מסכת חולין, פרקיה ונושאיה.</p>
+          <button class="primary-action" id="heroQuestionsButton" type="button" aria-controls="heroQuestions" aria-expanded="false">פתחו את השאלות <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        </div>
+      </div>
+
+      <div class="hero-sea">
+        <div class="sea-capsule">
+          <img src="assets/chullin-cow-hero.png" alt="בהמת חולין מאוירת, מוקפת ביחידות מחשבה" width="1536" height="1024">
+        </div>
+        <ul id="heroQuestions" class="hero-questions" aria-live="polite" aria-label="השאלות שהמסכת עונה עליהן">
+          <li class="question" aria-hidden="true"><span>מי רשאי לשחוט?</span></li>
+          <li class="question" aria-hidden="true"><span>מה נחשבת שחיטה כשרה?</span></li>
+          <li class="question" aria-hidden="true"><span>מתי בהמה נחשבת טרפה?</span></li>
+          <li class="question" aria-hidden="true"><span>אילו מצוות מלוות את השחיטה?</span></li>
+          <li class="question" aria-hidden="true"><span>מה כולל איסור בשר בחלב?</span></li>
+          <li class="question" aria-hidden="true"><span>האם יש חלקים שאסורים באכילה?</span></li>
+          <li class="question" aria-hidden="true"><span>האם יש חלקים שצריכים לתת לאחרים?</span></li>
+        </ul>
+        <p class="sea-line" id="heroCue">לחצו כדי לפתוח את יחידת השאלות</p>
+      </div>
+    </section>
+
+    <section id="torah-sources" class="screen torah-sources-screen" data-screen aria-labelledby="torahSourcesTitle">
+      <div class="section-heading reveal">
+        <h2 id="torahSourcesTitle">פסוקי התורה <strong>שביסוד מסכת חולין</strong></h2>
+        <p>המסכת מרחיבה דינים ומצוות שכבר נזכרו בתורה. לחצו על נושא כדי לקרוא את הפסוק המנוקד.</p>
+      </div>
+
+      <div class="torah-source-groups reveal" id="torahSourceGroups">
+        <section class="torah-source-group" aria-labelledby="foodSourcesTitle">
+          <h3 id="foodSourcesTitle">כשרות ואיסורי מאכל</h3>
+          <div class="torah-source-list">
+            <details class="torah-verse-card">
+              <summary><span>סימני בעלי חיים טהורים</span><small>ויקרא י״א, א–ל</small></summary>
+              <div class="verse-content"><ol><li>וַיְדַבֵּ֧ר יְהֹוָ֛ה אֶל־מֹשֶׁ֥ה וְאֶֽל־אַהֲרֹ֖ן לֵאמֹ֥ר אֲלֵהֶֽם׃</li><li>דַּבְּר֛וּ אֶל־בְּנֵ֥י יִשְׂרָאֵ֖ל לֵאמֹ֑ר זֹ֤את הַֽחַיָּה֙ אֲשֶׁ֣ר תֹּאכְל֔וּ מִכׇּל־הַבְּהֵמָ֖ה אֲשֶׁ֥ר עַל־הָאָֽרֶץ׃</li><li>כֹּ֣ל מַפְרֶ֣סֶת פַּרְסָ֗ה וְשֹׁסַ֤עַת שֶׁ֙סַע֙ פְּרָסֹ֔ת מַעֲלַ֥ת גֵּרָ֖ה בַּבְּהֵמָ֑ה אֹתָ֖הּ תֹּאכֵֽלוּ׃</li><li>אַ֤ךְ אֶת־זֶה֙ לֹ֣א תֹֽאכְל֔וּ מִֽמַּעֲלֵי֙ הַגֵּרָ֔ה וּמִמַּפְרִסֵ֖י הַפַּרְסָ֑ה אֶֽת־הַ֠גָּמָ֠ל כִּֽי־מַעֲלֵ֨ה גֵרָ֜ה ה֗וּא וּפַרְסָה֙ אֵינֶ֣נּוּ מַפְרִ֔יס טָמֵ֥א ה֖וּא לָכֶֽם׃</li><li>וְאֶת־הַשָּׁפָ֗ן כִּֽי־מַעֲלֵ֤ה גֵרָה֙ ה֔וּא וּפַרְסָ֖ה לֹ֣א יַפְרִ֑יס טָמֵ֥א ה֖וּא לָכֶֽם׃</li><li>וְאֶת־הָאַרְנֶ֗בֶת כִּֽי־מַעֲלַ֤ת גֵּרָה֙ הִ֔וא וּפַרְסָ֖ה לֹ֣א הִפְרִ֑יסָה טְמֵאָ֥ה הִ֖וא לָכֶֽם׃</li><li>וְאֶת־הַ֠חֲזִ֠יר כִּֽי־מַפְרִ֨יס פַּרְסָ֜ה ה֗וּא וְשֹׁסַ֥ע שֶׁ֙סַע֙ פַּרְסָ֔ה וְה֖וּא גֵּרָ֣ה לֹֽא־יִגָּ֑ר טָמֵ֥א ה֖וּא לָכֶֽם׃</li><li>מִבְּשָׂרָם֙ לֹ֣א תֹאכֵ֔לוּ וּבְנִבְלָתָ֖ם לֹ֣א תִגָּ֑עוּ טְמֵאִ֥ים הֵ֖ם לָכֶֽם׃</li><li>אֶת־זֶה֙ תֹּֽאכְל֔וּ מִכֹּ֖ל אֲשֶׁ֣ר בַּמָּ֑יִם כֹּ֣ל אֲשֶׁר־לוֹ֩ סְנַפִּ֨יר וְקַשְׂקֶ֜שֶׂת בַּמַּ֗יִם בַּיַּמִּ֛ים וּבַנְּחָלִ֖ים אֹתָ֥ם תֹּאכֵֽלוּ׃</li><li>וְכֹל֩ אֲשֶׁ֨ר אֵֽין־ל֜וֹ סְנַפִּ֣יר וְקַשְׂקֶ֗שֶׂת בַּיַּמִּים֙ וּבַנְּחָלִ֔ים מִכֹּל֙ שֶׁ֣רֶץ הַמַּ֔יִם וּמִכֹּ֛ל נֶ֥פֶשׁ הַחַיָּ֖ה אֲשֶׁ֣ר בַּמָּ֑יִם שֶׁ֥קֶץ הֵ֖ם לָכֶֽם׃</li><li>וְשֶׁ֖קֶץ יִהְי֣וּ לָכֶ֑ם מִבְּשָׂרָם֙ לֹ֣א תֹאכֵ֔לוּ וְאֶת־נִבְלָתָ֖ם תְּשַׁקֵּֽצוּ׃</li><li>כֹּ֣ל אֲשֶׁ֥ר אֵֽין־ל֛וֹ סְנַפִּ֥יר וְקַשְׂקֶ֖שֶׂת בַּמָּ֑יִם שֶׁ֥קֶץ ה֖וּא לָכֶֽם׃</li><li>וְאֶת־אֵ֙לֶּה֙ תְּשַׁקְּצ֣וּ מִן־הָע֔וֹף לֹ֥א יֵאָכְל֖וּ שֶׁ֣קֶץ הֵ֑ם אֶת־הַנֶּ֙שֶׁר֙ וְאֶת־הַפֶּ֔רֶס וְאֵ֖ת הָעׇזְנִיָּֽה׃</li><li>וְאֶ֨ת־הַדָּאָ֔ה וְאֶת־הָאַיָּ֖ה לְמִינָֽהּ׃</li><li>אֵ֥ת כׇּל־עֹרֵ֖ב לְמִינֽוֹ׃</li><li>וְאֵת֙ בַּ֣ת הַֽיַּעֲנָ֔ה וְאֶת־הַתַּחְמָ֖ס וְאֶת־הַשָּׁ֑חַף וְאֶת־הַנֵּ֖ץ לְמִינֵֽהוּ׃</li><li>וְאֶת־הַכּ֥וֹס וְאֶת־הַשָּׁלָ֖ךְ וְאֶת־הַיַּנְשֽׁוּף׃</li><li>וְאֶת־הַתִּנְשֶׁ֥מֶת וְאֶת־הַקָּאָ֖ת וְאֶת־הָרָחָֽם׃</li><li>וְאֵת֙ הַחֲסִידָ֔ה הָאֲנָפָ֖ה לְמִינָ֑הּ וְאֶת־הַדּוּכִיפַ֖ת וְאֶת־הָעֲטַלֵּֽף׃</li><li>כֹּ֚ל שֶׁ֣רֶץ הָע֔וֹף הַהֹלֵ֖ךְ עַל־אַרְבַּ֑ע שֶׁ֥קֶץ ה֖וּא לָכֶֽם׃</li><li>אַ֤ךְ אֶת־זֶה֙ תֹּֽאכְל֔וּ מִכֹּל֙ שֶׁ֣רֶץ הָע֔וֹף הַהֹלֵ֖ךְ עַל־אַרְבַּ֑ע אֲשֶׁר־[ל֤וֹ] (לא) כְרָעַ֙יִם֙ מִמַּ֣עַל לְרַגְלָ֔יו לְנַתֵּ֥ר בָּהֵ֖ן עַל־הָאָֽרֶץ׃</li><li>אֶת־אֵ֤לֶּה מֵהֶם֙ תֹּאכֵ֔לוּ אֶת־הָֽאַרְבֶּ֣ה לְמִינ֔וֹ וְאֶת־הַסׇּלְעָ֖ם לְמִינֵ֑הוּ וְאֶת־הַחַרְגֹּ֣ל לְמִינֵ֔הוּ וְאֶת־הֶחָגָ֖ב לְמִינֵֽהוּ׃</li><li>וְכֹל֙ שֶׁ֣רֶץ הָע֔וֹף אֲשֶׁר־ל֖וֹ אַרְבַּ֣ע רַגְלָ֑יִם שֶׁ֥קֶץ ה֖וּא לָכֶֽם׃</li><li>וּלְאֵ֖לֶּה תִּטַּמָּ֑אוּ כׇּל־הַנֹּגֵ֥עַ בְּנִבְלָתָ֖ם יִטְמָ֥א עַד־הָעָֽרֶב׃</li><li>וְכׇל־הַנֹּשֵׂ֖א מִנִּבְלָתָ֑ם יְכַבֵּ֥ס בְּגָדָ֖יו וְטָמֵ֥א עַד־הָעָֽרֶב׃</li><li>לְֽכׇל־הַבְּהֵמָ֡ה אֲשֶׁ֣ר הִוא֩ מַפְרֶ֨סֶת פַּרְסָ֜ה וְשֶׁ֣סַע אֵינֶ֣נָּה שֹׁסַ֗עַת וְגֵרָה֙ אֵינֶ֣נָּה מַעֲלָ֔ה טְמֵאִ֥ים הֵ֖ם לָכֶ֑ם כׇּל־הַנֹּגֵ֥עַ בָּהֶ֖ם יִטְמָֽא׃</li><li>וְכֹ֣ל הוֹלֵ֣ךְ עַל־כַּפָּ֗יו בְּכׇל־הַֽחַיָּה֙ הַהֹלֶ֣כֶת עַל־אַרְבַּ֔ע טְמֵאִ֥ים הֵ֖ם לָכֶ֑ם כׇּל־הַנֹּגֵ֥עַ בְּנִבְלָתָ֖ם יִטְמָ֥א עַד־הָעָֽרֶב׃</li><li>וְהַנֹּשֵׂא֙ אֶת־נִבְלָתָ֔ם יְכַבֵּ֥ס בְּגָדָ֖יו וְטָמֵ֣א עַד־הָעָ֑רֶב טְמֵאִ֥ים הֵ֖מָּה לָכֶם׃</li><li>וְזֶ֤ה לָכֶם֙ הַטָּמֵ֔א בַּשֶּׁ֖רֶץ הַשֹּׁרֵ֣ץ עַל־הָאָ֑רֶץ הַחֹ֥לֶד וְהָעַכְבָּ֖ר וְהַצָּ֥ב לְמִינֵֽהוּ׃</li><li>וְהָאֲנָקָ֥ה וְהַכֹּ֖חַ וְהַלְּטָאָ֑ה וְהַחֹ֖מֶט וְהַתִּנְשָֽׁמֶת׃</li></ol><a href="https://www.sefaria.org/Leviticus.11.1-30?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div>
+            </details>
+            <details class="torah-verse-card"><summary><span>איסור טרפה</span><small>שמות כ״ב, ל</small></summary><div class="verse-content"><p>וְאַנְשֵׁי־קֹ֖דֶשׁ תִּהְי֣וּן לִ֑י וּבָשָׂ֨ר בַּשָּׂדֶ֤ה טְרֵפָה֙ לֹ֣א תֹאכֵ֔לוּ לַכֶּ֖לֶב תַּשְׁלִכ֥וּן אֹתֽוֹ׃</p><a href="https://www.sefaria.org/Exodus.22.30?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+            <details class="torah-verse-card"><summary><span>איסור גיד הנשה</span><small>בראשית ל״ב, ל״ג</small></summary><div class="verse-content"><p>עַל־כֵּ֡ן לֹֽא־יֹאכְל֨וּ בְנֵֽי־יִשְׂרָאֵ֜ל אֶת־גִּ֣יד הַנָּשֶׁ֗ה אֲשֶׁר֙ עַל־כַּ֣ף הַיָּרֵ֔ךְ עַ֖ד הַיּ֣וֹם הַזֶּ֑ה כִּ֤י נָגַע֙ בְּכַף־יֶ֣רֶךְ יַעֲקֹ֔ב בְּגִ֖יד הַנָּשֶֽׁה׃</p><a href="https://www.sefaria.org/Genesis.32.33?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+            <details class="torah-verse-card"><summary><span>איסור בשר בְּחָלָב</span><small>שמות כ״ג, י״ט</small></summary><div class="verse-content"><p>רֵאשִׁ֗ית בִּכּוּרֵי֙ אַדְמָ֣תְךָ֔ תָּבִ֕יא בֵּ֖ית יְהֹוָ֣ה אֱלֹהֶ֑יךָ לֹֽא־תְבַשֵּׁ֥ל גְּדִ֖י בַּחֲלֵ֥ב אִמּֽוֹ׃</p><a href="https://www.sefaria.org/Exodus.23.19?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+            <details class="torah-verse-card"><summary><span>איסור אכילת דם</span><small>ויקרא ג׳, י״ז</small></summary><div class="verse-content"><p>חֻקַּ֤ת עוֹלָם֙ לְדֹרֹ֣תֵיכֶ֔ם בְּכֹ֖ל מוֹשְׁבֹֽתֵיכֶ֑ם כׇּל־חֵ֥לֶב וְכׇל־דָּ֖ם לֹ֥א תֹאכֵֽלוּ׃</p><a href="https://www.sefaria.org/Leviticus.3.17?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+            <details class="torah-verse-card"><summary><span>איסור אכילת חֵלֶב</span><small>ויקרא ז׳, כ״ג</small></summary><div class="verse-content"><p>דַּבֵּ֛ר אֶל־בְּנֵ֥י יִשְׂרָאֵ֖ל לֵאמֹ֑ר כׇּל־חֵ֜לֶב שׁ֥וֹר וְכֶ֛שֶׂב וָעֵ֖ז לֹ֥א תֹאכֵֽלוּ׃</p><a href="https://www.sefaria.org/Leviticus.7.23?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+            <details class="torah-verse-card"><summary><span>איסור אבר מן החי</span><small>דברים י״ב, כ״ג</small></summary><div class="verse-content"><p>רַ֣ק חֲזַ֗ק לְבִלְתִּי֙ אֲכֹ֣ל הַדָּ֔ם כִּ֥י הַדָּ֖ם ה֣וּא הַנָּ֑פֶשׁ וְלֹא־תֹאכַ֥ל הַנֶּ֖פֶשׁ עִם־הַבָּשָֽׂר׃</p><a href="https://www.sefaria.org/Deuteronomy.12.23?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+          </div>
+        </section>
+
+        <section class="torah-source-group" aria-labelledby="mitzvotSourcesTitle">
+          <h3 id="mitzvotSourcesTitle">מצוות הקשורות לבעלי חיים</h3>
+          <div class="torah-source-list">
+            <details class="torah-verse-card"><summary><span>איסור אותו ואת בנו</span><small>ויקרא כ״ב, כ״ח</small></summary><div class="verse-content"><p>וְשׁ֖וֹר אוֹ־שֶׂ֑ה אֹת֣וֹ וְאֶת־בְּנ֔וֹ לֹ֥א תִשְׁחֲט֖וּ בְּי֥וֹם אֶחָֽד׃</p><a href="https://www.sefaria.org/Leviticus.22.28?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+            <details class="torah-verse-card"><summary><span>מצוות כיסוי הדם</span><small>ויקרא י״ז, י״ג</small></summary><div class="verse-content"><p>וְאִ֨ישׁ אִ֜ישׁ מִבְּנֵ֣י יִשְׂרָאֵ֗ל וּמִן־הַגֵּר֙ הַגָּ֣ר בְּתוֹכָ֔ם אֲשֶׁ֨ר יָצ֜וּד צֵ֥יד חַיָּ֛ה אוֹ־ע֖וֹף אֲשֶׁ֣ר יֵאָכֵ֑ל וְשָׁפַךְ֙ אֶת־דָּמ֔וֹ וְכִסָּ֖הוּ בֶּעָפָֽר׃</p><a href="https://www.sefaria.org/Leviticus.17.13?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+            <details class="torah-verse-card"><summary><span>מתנות כהונה: זרוע, לחיים וקבה</span><small>דברים י״ח, ג׳</small></summary><div class="verse-content"><p>וְזֶ֡ה יִהְיֶה֩ מִשְׁפַּ֨ט הַכֹּהֲנִ֜ים מֵאֵ֣ת הָעָ֗ם מֵאֵ֛ת זֹבְחֵ֥י הַזֶּ֖בַח אִם־שׁ֣וֹר אִם־שֶׂ֑ה וְנָתַן֙ לַכֹּהֵ֔ן הַזְּרֹ֥עַ וְהַלְּחָיַ֖יִם וְהַקֵּבָֽה׃</p><a href="https://www.sefaria.org/Deuteronomy.18.3?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+            <details class="torah-verse-card"><summary><span>מצוות ראשית הגז</span><small>דברים י״ח, ד׳</small></summary><div class="verse-content"><p>רֵאשִׁ֨ית דְּגָֽנְךָ֜ תִּירֹשְׁךָ֣ וְיִצְהָרֶ֗ךָ וְרֵאשִׁ֛ית גֵּ֥ז צֹאנְךָ֖ תִּתֶּן־לֽוֹ׃</p><a href="https://www.sefaria.org/Deuteronomy.18.4?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+            <details class="torah-verse-card"><summary><span>מצוות שילוח הקן</span><small>דברים כ״ב, ו׳–ז׳</small></summary><div class="verse-content"><p>כִּ֣י יִקָּרֵ֣א קַן־צִפּ֣וֹר לְפָנֶ֡יךָ בַּדֶּ֜רֶךְ בְּכׇל־עֵ֣ץ אוֹ עַל־הָאָ֗רֶץ אֶפְרֹחִים֙ אוֹ בֵיצִ֔ים וְהָאֵ֤ם רֹבֶ֙צֶת֙ עַל־הָֽאֶפְרֹחִ֔ים אוֹ עַל־הַבֵּיצִ֑ים לֹא־תִקַּ֥ח הָאֵ֖ם עַל־הַבָּנִֽים׃</p><p>שַׁלֵּ֤חַ תְּשַׁלַּח֙ אֶת־הָאֵ֔ם וְאֶת־הַבָּנִ֖ים תִּֽקַּֽח־לָ֑ךְ לְמַ֙עַן֙ יִ֣יטַב לָ֔ךְ וְהַאֲרַכְתָּ֖ יָמִֽים׃</p><a href="https://www.sefaria.org/Deuteronomy.22.6-7?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+          </div>
+        </section>
+
+        <section class="torah-source-group" aria-labelledby="puritySourcesTitle">
+          <h3 id="puritySourcesTitle">טומאה וטהרה</h3>
+          <div class="torah-source-list">
+            <details class="torah-verse-card"><summary><span>טומאת אוכלים</span><small>ויקרא י״א, ל״ד</small></summary><div class="verse-content"><p>מִכׇּל־הָאֹ֜כֶל אֲשֶׁ֣ר יֵאָכֵ֗ל אֲשֶׁ֨ר יָב֥וֹא עָלָ֛יו מַ֖יִם יִטְמָ֑א וְכׇל־מַשְׁקֶה֙ אֲשֶׁ֣ר יִשָּׁתֶ֔ה בְּכׇל־כְּלִ֖י יִטְמָֽא׃</p><a href="https://www.sefaria.org/Leviticus.11.34?lang=he" target="_blank" rel="noreferrer">למקור המלא בספריא</a></div></details>
+          </div>
+        </section>
+      </div>
+      <p class="torah-source-credit">נוסח הפסוקים המנוקד: <a href="https://www.sefaria.org" target="_blank" rel="noreferrer">ספריא</a>, מקרא על פי המסורה.</p>
+    </section>
+
+    <section id="journey" class="screen journey-screen" data-screen aria-labelledby="journeyTitle">
+      <div class="section-heading reveal">
+        <h2 id="journeyTitle">מן הבהמה <strong>אל האכילה</strong></h2>
+        <p>השאלות שנפתחו מובילות תחילה אל הכשרת הבהמה, ומשם אל מה שנשאר אסור או שנדרש לתת ממנה.</p>
+      </div>
+
+      <div class="journey-layout reveal">
+        <ol class="journey-main" aria-label="היחידה המרכזית במסכת">
+          <li class="journey-stage theme-preparation">
+            <span class="stage-number" aria-hidden="true">1</span>
+            <div>
+              <h3>הכנת הבהמה לאכילה</h3>
+              <p>מי רשאי לשחוט, מהי שחיטה כשרה, ומתי הבהמה אינה ראויה לאכילה.</p>
+            </div>
+          </li>
+          <li class="journey-connector"><span>אחרי השחיטה</span></li>
+          <li class="journey-stage theme-prohibitions">
+            <span class="stage-number" aria-hidden="true">2</span>
+            <div>
+              <h3>איסורים בבשר שנשחט</h3>
+              <p>גם בשר שנשחט כראוי עשוי לכלול חלקים אסורים או לעורר את שאלת בשר בחלב.</p>
+            </div>
+          </li>
+          <li class="journey-connector"><span>מן האכילה אל האחריות</span></li>
+          <li class="journey-stage is-goal theme-gifts">
+            <span class="stage-number" aria-hidden="true">3</span>
+            <div>
+              <h3>חלקים הניתנים לכהנים</h3>
+              <p>מן הבהמה ומן הצמר ניתנות מתנות, והאכילה מקבלת גם ממד של נתינה.</p>
+            </div>
+          </li>
+        </ol>
+
+        <aside class="journey-asides" aria-labelledby="journeyAsidesTitle">
+          <h3 id="journeyAsidesTitle" class="asides-title">הרחבות במסכת</h3>
+          <article class="journey-aside theme-purity">
+            <h4>טומאה וטהרה</h4>
+            <p>מעמד הבהמה, הוולד והבשר בשאלות של טומאה וטהרה.</p>
+          </article>
+          <article class="journey-aside theme-additional">
+            <h4>מצוות נוספות בבעלי חיים</h4>
+            <p>שילוח הקן</p>
+          </article>
+        </aside>
+      </div>
+
+      <p class="insight reveal"><b>השלב הבא</b> נראה כיצד הנושאים האלה נפרשים לאורך שנים־עשר פרקי המסכת.</p>
+    </section>
+
+    <section id="chapters" class="screen chapters-screen" data-screen aria-labelledby="chaptersTitle">
+      <div class="section-heading reveal">
+        <p class="eyebrow">אותו רצף, עכשיו בתוך המסכת</p>
+        <h2 id="chaptersTitle">מן הנושאים <strong>אל הפרקים</strong></h2>
+        <p>שלושת הנושאים הראשיים מתפתחים לקבוצות של פרקים. ביניהם חוזרת שאלת הטומאה והטהרה, והמסכת נחתמת במצווה נוספת בבעלי חיים.</p>
+      </div>
+
+      <div class="chapter-development reveal" id="chapterDevelopment" aria-label="מפת התפתחות נושאי המסכת לשנים עשר פרקים">
+        <div class="chapter-map-flow">
+          <section class="chapter-map-group theme-preparation" style="--map-order: 0">
+            <header><span>נושא ראשון</span><h3>הכנת הבהמה לאכילה</h3><small>פרקים א–ג</small></header>
+            <div class="chapter-map-items">
+              <button type="button" data-map-chapter="slaughter-1"><b>א</b><span>הכל שוחטין</span></button>
+              <button type="button" data-map-chapter="slaughter-2"><b>ב</b><span>השוחט</span></button>
+              <button type="button" data-map-chapter="treifot"><b>ג</b><span>אלו טרפות</span></button>
+            </div>
+          </section>
+
+          <section class="chapter-map-group map-interlude theme-purity" style="--map-order: 1">
+            <header><span>ציר חוזר</span><h3>טומאה וטהרה</h3><small>פרק ד</small></header>
+            <div class="chapter-map-items">
+              <button type="button" data-map-chapter="fetus"><b>ד</b><span>בהמה המקשה</span></button>
+            </div>
+          </section>
+
+          <section class="chapter-map-group theme-prohibitions" style="--map-order: 2">
+            <header><span>נושא שני</span><h3>איסורים בבשר שנשחט</h3><small>פרקים ה–ח</small></header>
+            <div class="chapter-map-items">
+              <button type="button" data-map-chapter="mother-child"><b>ה</b><span>אותו ואת בנו</span></button>
+              <button type="button" data-map-chapter="blood"><b>ו</b><span>כיסוי הדם</span></button>
+              <button type="button" data-map-chapter="sinew"><b>ז</b><span>גיד הנשה</span></button>
+              <button type="button" data-map-chapter="meat-milk"><b>ח</b><span>כל הבשר</span></button>
+            </div>
+          </section>
+
+          <section class="chapter-map-group map-interlude theme-purity" style="--map-order: 3">
+            <header><span>הציר חוזר</span><h3>טומאה וטהרה</h3><small>פרק ט</small></header>
+            <div class="chapter-map-items">
+              <button type="button" data-map-chapter="skin"><b>ט</b><span>העור והרוטב</span></button>
+            </div>
+          </section>
+
+          <section class="chapter-map-group theme-gifts" style="--map-order: 4">
+            <header><span>נושא שלישי</span><h3>חלקים הניתנים לכהנים</h3><small>פרקים י–י״א</small></header>
+            <div class="chapter-map-items">
+              <button type="button" data-map-chapter="gifts"><b>י</b><span>הזרוע, הלחיים והקיבה</span></button>
+              <button type="button" data-map-chapter="wool"><b>י״א</b><span>ראשית הגז</span></button>
+            </div>
+          </section>
+
+          <section class="chapter-map-group map-finale theme-additional" style="--map-order: 5">
+            <header><span>חתימת המסכת</span><h3>מצווה נוספת בבעלי חיים</h3><small>פרק י״ב</small></header>
+            <div class="chapter-map-items">
+              <button type="button" data-map-chapter="nest"><b>י״ב</b><span>שילוח הקן</span></button>
+            </div>
+          </section>
+        </div>
+        <p class="chapter-map-hint">לחצו על פרק במפה כדי לפתוח את משניותיו ואת הנושאים שהגמרא מרחיבה.</p>
+      </div>
+
+      <div class="chapters-split reveal">
+        <div id="chapterGrid" class="chapter-list" aria-label="פרקי מסכת חולין"></div>
+        <section id="chapterDetail" class="chapter-detail" aria-live="polite" tabindex="-1"></section>
+      </div>
+    </section>
+
+    <section id="chapter-anatomy" class="screen anatomy-screen" data-screen aria-labelledby="anatomyTitle">
+      <div class="section-heading reveal">
+        <h2 id="anatomyTitle">כיצד בנוי <strong>פרק בגמרא?</strong></h2>
+        <p>המשנה מניחה את התשתית, והגמרא בונה סביבה שכבות של פירוש, דיון ותוספת.</p>
+      </div>
+
+      <div class="chapter-growth">
+        <div class="chapter-growth-actions">
+          <button class="chapter-growth-next" id="nextChapterGrowth" type="button" aria-controls="chapterGrowthStage">הבא <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button class="chapter-growth-previous" id="previousChapterGrowth" type="button" aria-controls="chapterGrowthStage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הקודם</button>
+          <button class="chapter-growth-replay" id="restartChapterGrowth" type="button" aria-controls="chapterGrowthStage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3L4.5 9M4.5 4.5V9H9"/></svg> הפעל מחדש</button>
+          <span class="chapter-growth-status" id="chapterGrowthStatus" role="status" aria-live="polite">המשנה במרכז</span>
+        </div>
+
+        <div class="chapter-growth-stage" id="chapterGrowthStage" aria-label="תרשים מונפש של התפתחות פרק בגמרא מן המשנה אל בירוריה, מימרות האמוראים והנושאים הבאים בדרך אגב">
+          <div class="growth-ring growth-ring-inner" data-growth-step="1"><span>בירור המשנה</span></div>
+          <div class="growth-ring growth-ring-outer" data-growth-step="7"><span>הרחבת האמוראים</span></div>
+
+          <div class="growth-core is-visible" data-growth-step="0"><strong>המשנה</strong><span>נקודת המוצא של הפרק</span></div>
+
+          <div class="growth-node growth-question" data-growth-step="1" style="--x: 0px; --y: -205px">מי התנא?</div>
+          <div class="growth-node growth-question" data-growth-step="2" style="--x: 184px; --y: -112px">מה מקור הדין?</div>
+          <div class="growth-node growth-question" data-growth-step="3" style="--x: 184px; --y: 112px">מה טעם הדין?</div>
+          <div class="growth-node growth-question" data-growth-step="4" style="--x: 0px; --y: 205px">מהם גבולות הדין?</div>
+          <div class="growth-node growth-question" data-growth-step="5" style="--x: -184px; --y: 112px">מדוע המשנה התנסחה כך?</div>
+          <div class="growth-node growth-question" data-growth-step="6" style="--x: -184px; --y: -112px">האם ניתן היה לקצר?</div>
+
+          <div class="growth-node growth-amora" data-growth-step="7" style="--x: 0px; --y: -322px"><span><strong>הלכות שלא הוזכרו בביאור המשנה</strong><small>מעגל רחב יותר</small></span></div>
+          <div class="growth-node growth-amora" data-growth-step="8" style="--x: 360px; --y: 100px"><span><strong>מחלוקות שלא הוזכרו בביאור המשנה</strong><small>הרחבה נוספת</small></span></div>
+          <div class="growth-node growth-amora" data-growth-step="9" style="--x: -360px; --y: 100px"><span><strong>שאלות שלא נזכרו בביאור המשנה</strong><small>מעבר למשנה</small></span></div>
+
+          <article class="growth-branch growth-branch-halakha" data-growth-step="10">
+            <strong>מימרה הלכתית בדרך אגב</strong>
+            <small>לפי קרבת הנושא</small>
+            <p>דין נוסף שנכנס לפרק מפני שהוא משלים או מרחיב את הנושא הנדון.</p>
+          </article>
+          <article class="growth-branch growth-branch-aggadah" data-growth-step="11">
+            <strong>סוגיית אגדה</strong>
+            <small>לפי שם החכם או קרבת הנושא</small>
+            <p>סיפור, דרשה או רעיון שנקשרים לחכם שנזכר או לעולם התוכן של הדיון.</p>
+          </article>
+        </div>
+
+        <div class="chapter-sequence-stage" id="chapterSequenceStage" aria-label="שש יחידות משנה המצטרפות יחד לפרק אחד בגמרא">
+          <div class="chapter-sequence-frame" data-growth-step="18"><span>פרק בגמרא</span></div>
+          <div class="chapter-sequence-grid">
+            <article class="mini-mishnah-unit" data-growth-step="12" data-discussions="1,2,10" style="--orbit-size: 212px"><div class="mini-mishnah-orbit"><strong>משנה א</strong></div><p>מוקד הדיון הראשון</p><small>בירור 1 · הרחבה 2 · הסתעפות 10</small></article>
+            <article class="mini-mishnah-unit" data-growth-step="13" data-discussions="6,3,1" style="--orbit-size: 190px"><div class="mini-mishnah-orbit"><strong>משנה ב</strong></div><p>מוקד הדיון השני</p><small>בירור 6 · הרחבה 3 · הסתעפות 1</small></article>
+            <article class="mini-mishnah-unit" data-growth-step="14" data-discussions="2,1,2" style="--orbit-size: 164px"><div class="mini-mishnah-orbit"><strong>משנה ג</strong></div><p>מוקד הדיון השלישי</p><small>בירור 2 · הרחבה 1 · הסתעפות 2</small></article>
+            <article class="mini-mishnah-unit" data-growth-step="15" data-discussions="4,6,3" style="--orbit-size: 212px"><div class="mini-mishnah-orbit"><strong>משנה ד</strong></div><p>מוקד הדיון הרביעי</p><small>בירור 4 · הרחבה 6 · הסתעפות 3</small></article>
+            <article class="mini-mishnah-unit" data-growth-step="16" data-discussions="1,1,1" style="--orbit-size: 150px"><div class="mini-mishnah-orbit"><strong>משנה ה</strong></div><p>מוקד הדיון החמישי</p><small>בירור 1 · הרחבה 1 · הסתעפות 1</small></article>
+            <article class="mini-mishnah-unit" data-growth-step="17" data-discussions="2,3,7" style="--orbit-size: 206px"><div class="mini-mishnah-orbit"><strong>משנה ו</strong></div><p>מוקד הדיון השישי</p><small>בירור 2 · הרחבה 3 · הסתעפות 7</small></article>
+          </div>
+          <div class="chapter-sequence-legend" aria-label="מקרא המעגלים"><span class="sequence-key-direct">בירור המשנה</span><span class="sequence-key-expansion">הרחבות</span><span class="sequence-key-branch">הסתעפויות</span></div>
+          <p class="chapter-sequence-summary">כל משנה פותחת מוקד דיון, אך היקף הבירור, ההרחבות וההסתעפויות משתנה ממוקד למוקד. מכל המוקדים יחד נבנה הפרק בגמרא. <span>הכמויות באיור להמחשה בלבד.</span></p>
+        </div>
+
+        <section class="chapter-example-stage" id="chapterExampleStage" aria-labelledby="chapterExampleTitle">
+          <header class="chapter-example-head">
+            <h3 id="chapterExampleTitle">הדגמה להתפתחות סוגיה: <strong>פרק כל הבשר</strong></h3>
+            <p>מתחילים ברצף המשניות, מתמקדים במקור אחד ועוקבים אחר המעבר מביאור ישיר לנושא מתרחב.</p>
+          </header>
+
+          <div class="example-mishnah-sequence" data-growth-step="19" aria-label="שלוש המשניות הראשונות בפרק כל הבשר">
+            <article class="example-mishnah-unit is-source">
+              <div class="example-mishnah-text">
+                <small>משנה א׳</small>
+                <p>כָּל הַבָּשָׂר אָסוּר לְבַשֵּׁל בְּחָלָב, חוּץ מִבְּשַׂר דָּגִים וַחֲגָבִים. וְאָסוּר לְהַעֲלוֹתוֹ עִם הַגְּבִינָה עַל הַשֻּׁלְחָן, חוּץ מִבְּשַׂר דָּגִים וַחֲגָבִים. הַנּוֹדֵר מִן הַבָּשָׂר, מֻתָּר בִּבְשַׂר דָּגִים וַחֲגָבִים. הָעוֹף עוֹלֶה עִם הַגְּבִינָה עַל הַשֻּׁלְחָן וְאֵינוֹ נֶאֱכָל, דִּבְרֵי בֵית שַׁמַּאי. וּבֵית הִלֵּל אוֹמְרִים, לֹא עוֹלֶה וְלֹא נֶאֱכָל. אָמַר רַבִּי יוֹסֵי, זוֹ מִקֻּלֵּי בֵית שַׁמַּאי וּמֵחֻמְרֵי בֵית הִלֵּל. בְּאֵיזֶה שֻׁלְחָן אָמְרוּ, בַּשֻּׁלְחָן שֶׁאוֹכֵל עָלָיו. אֲבָל בַּשֻּׁלְחָן שֶׁסּוֹדֵר עָלָיו אֶת הַתַּבְשִׁיל, נוֹתֵן זֶה בְצַד זֶה וְאֵינוֹ חוֹשֵׁשׁ:</p>
+              </div>
+              <div class="example-mishnah-card">
+                <h4>מהו הבשר שנאסר?</h4>
+                <p>ובחלקה השני: האם מותר להעלות עוף וגבינה יחד על השולחן?</p>
+              </div>
+            </article>
+            <span class="sequence-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+            <article class="example-mishnah-unit">
+              <div class="example-mishnah-text">
+                <small>משנה ב׳</small>
+                <p>צוֹרֵר אָדָם בָּשָׂר וּגְבִינָה בְּמִטְפַּחַת אַחַת, וּבִלְבַד שֶׁלֹּא יְהוּ נוֹגְעִין זֶה בָזֶה. רַבָּן שִׁמְעוֹן בֶּן גַּמְלִיאֵל אוֹמֵר, שְׁנֵי אַכְסְנָאִין אוֹכְלִין עַל שֻׁלְחָן אֶחָד, זֶה בָּשָׂר וָזֶה גְּבִינָה, וְאֵין חוֹשְׁשִׁין:</p>
+              </div>
+              <div class="example-mishnah-card">
+                <h4>הנחת בשר וגבינה בסמיכות</h4>
+                <p>מגע בין המאכלים ואכילת בשר וגבינה על שולחן אחד.</p>
+              </div>
+            </article>
+            <span class="sequence-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+            <article class="example-mishnah-unit">
+              <div class="example-mishnah-text">
+                <small>משנה ג׳</small>
+                <p>טִפַּת חָלָב שֶׁנָּפְלָה עַל הַחֲתִיכָה, אִם יֶשׁ בָּהּ בְּנוֹתֵן טַעַם בְּאוֹתָהּ חֲתִיכָה, אָסוּר. נִעֵר אֶת הַקְּדֵרָה, אִם יֶשׁ בָּהּ בְּנוֹתֵן טַעַם בְּאוֹתָהּ קְדֵרָה, אָסוּר. הַכְּחָל, קוֹרְעוֹ וּמוֹצִיא אֶת חֲלָבוֹ. לֹא קְרָעוֹ, אֵינוֹ עוֹבֵר עָלָיו. הַלֵּב, קוֹרְעוֹ וּמוֹצִיא אֶת דָּמוֹ. לֹא קְרָעוֹ, אֵינוֹ עוֹבֵר עָלָיו. הַמַּעֲלֶה אֶת הָעוֹף עִם הַגְּבִינָה עַל הַשֻּׁלְחָן, אֵינוֹ עוֹבֵר בְּלֹא תַעֲשֶׂה:</p>
+              </div>
+              <div class="example-mishnah-card">
+                <h4>מה דין חלב שנשפך לבשר?</h4>
+                <p>טיפת חלב שנפלה על חתיכת בשר והתפשטות הטעם בתבשיל.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="real-sugya-map" aria-label="מפת התפתחות הסוגיה מן החלק השני של משנה א">
+            <article class="real-mishnah-core" data-growth-step="20">
+              <h4>העלאת עוף על שולחן עם גבינה</h4>
+              <small>זום אל משנה א׳ · החלק השני</small>
+              <p>הָעוֹף עוֹלֶה עִם הַגְּבִינָה עַל הַשֻּׁלְחָן וְאֵינוֹ נֶאֱכָל, דִּבְרֵי בֵית שַׁמַּאי. וּבֵית הִלֵּל אוֹמְרִים, לֹא עוֹלֶה וְלֹא נֶאֱכָל. אָמַר רַבִּי יוֹסֵי, זוֹ מִקֻּלֵּי בֵית שַׁמַּאי וּמֵחֻמְרֵי בֵית הִלֵּל. בְּאֵיזֶה שֻׁלְחָן אָמְרוּ, בַּשֻּׁלְחָן שֶׁאוֹכֵל עָלָיו. אֲבָל בַּשֻּׁלְחָן שֶׁסּוֹדֵר עָלָיו אֶת הַתַּבְשִׁיל, נוֹתֵן זֶה בְצַד זֶה וְאֵינוֹ חוֹשֵׁשׁ:</p>
+            </article>
+
+            <article class="real-sugya-node direct-question" data-growth-step="21">
+              <strong>מי התנא של המשנה?</strong>
+              <small>שאלה ישירה על המשנה</small>
+            </article>
+            <article class="real-sugya-node complement-question complement-one" data-growth-step="22">
+              <strong>המתנה לאחר אכילת בשר</strong>
+              <small>שאלה משלימה</small>
+            </article>
+            <article class="real-sugya-node complement-question complement-three" data-growth-step="23">
+              <strong>המתנה לאחר אכילת עוף</strong>
+              <small>שאלה משלימה</small>
+            </article>
+            <article class="real-sugya-node complement-question complement-two" data-growth-step="24">
+              <strong>כיצד מקנחים את הפה בין עוף לחלב?</strong>
+              <small>שאלה משלימה</small>
+            </article>
+          </div>
+
+          <div class="example-topic-bridge" data-growth-step="25">
+            <span>משאלת קינוח הפה עוברים לנטילת ידיים בין בשר לחלב</span>
+            <b class="bridge-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M6 13l6 6 6-6"/></svg></b>
+            <strong>מכאן מתרחבת הגמרא לדיני מים ראשונים ואחרונים</strong>
+          </div>
+
+          <section class="handwashing-example-cluster" aria-labelledby="handwashingClusterTitle">
+            <div class="handwashing-hub" data-growth-step="25">
+              <h4 id="handwashingClusterTitle">דיני מים ראשונים ואחרונים</h4>
+              <small>נושא מתרחב</small>
+            </div>
+            <div class="handwashing-topic-grid">
+              <article data-growth-step="26"><strong>הגדרת חובת מים ראשונים ואחרונים</strong><span>הלכה</span></article>
+              <article data-growth-step="27"><strong>מדוע מים אחרונים חובה?</strong><span>בירור הטעם</span></article>
+              <article class="is-aggadah" data-growth-step="28"><strong>אגדה על חשיבות מצוות נטילת ידיים</strong><span>אגדה</span></article>
+              <article data-growth-step="29"><strong>האם מותר ליטול במים חמים?</strong><span>גבולות הדין</span></article>
+              <article data-growth-step="30"><strong>למה צריך ליטול ידיים לחולין?</strong><span>בירור הטעם</span></article>
+              <article class="is-more" data-growth-step="31"><strong>ועוד שאלות בענייני נטילת ידיים</strong><span>הרחבה נוספת</span></article>
+            </div>
+          </section>
+        </section>
+
+        <div class="growth-legend" aria-hidden="true">
+          <span class="key-mishnah">משנה</span>
+          <span class="key-question">שאלות ביאור</span>
+          <span class="key-amora">מימרות אמוראים</span>
+          <span class="key-branch">הלכה ואגדה בדרך אגב</span>
+        </div>
+      </div>
+
+      <dialog id="growthOrderDialog" class="growth-order-dialog" aria-labelledby="growthOrderTitle">
+        <div class="growth-order-dialog-inner">
+          <button id="closeGrowthOrder" class="dialog-close" type="button" aria-label="סגירת ההסבר"></button>
+          <h3 id="growthOrderTitle">שימו לב! <strong>עיקרון חשוב בקריאת הגמרא</strong></h3>
+          <p class="growth-order-lead">הגמרא תמיד שומרת על סדר קבוע, ולכן הבירורים על המשנה לעולם יוקדמו להרחבות נוספות של אמוראים.</p>
+          <p>יש מקרים רבים שהגמרא מחלקת את ביאור המשנה לכמה חלקים, ואז אחרי שביארה חלק אחד היא מרחיבה עליו במימרות רבות של אמוראים. אולם לאחר מכן, כשהיא תיגש לטפל בחלק חדש, היא שוב תתחיל בשאלות על אותו מקור ורק אז תמשיך הלאה למימרות נוספות של אמוראים.</p>
+          <button id="confirmGrowthOrder" class="growth-order-confirm" type="button">הבנתי, אפשר להמשיך</button>
+        </div>
+      </dialog>
+
+      <dialog id="talmudAdditionsDialog" class="talmud-additions-dialog" aria-labelledby="talmudAdditionsTitle">
+        <div class="talmud-additions-dialog-inner">
+          <button id="closeTalmudAdditions" class="dialog-close" type="button" aria-label="סגירת ההסבר"></button>
+          <h3 id="talmudAdditionsTitle">תוספות לביאור המשנה</h3>
+          <p class="dialog-context">לפני הרחבות שאינן ביאור ישיר למשנה</p>
+          <p class="talmud-additions-lead">כשרב אשי חיבר את התלמוד, הוא החליט לקבץ לתוכו את כל ביאורי המשנה עד לתקופתו, ובנוסף לכך הוסיף עוד דברים:</p>
+          <ol class="talmud-additions-list">
+            <li>פסקי הלכה בנושאים שאינם קשורים לביאור המשנה ישירות.</li>
+            <li>גזרות ותקנות שונות של החכמים עד תקופתו.</li>
+            <li>אגדות ודברי מוסר שונים.</li>
+          </ol>
+
+          <section class="source-excerpt">
+            <p class="source-excerpt-title">הרמב״ם, הקדמה לפירוש המשנה — על מטרות חיבור התלמוד</p>
+            <details>
+              <summary>לקריאת דברי הרמב״ם</summary>
+              <blockquote>
+                <p>והתבודד רב אשי לחבר התלמוד, וראה בעצתו לעשות בדברי כל הבאים אחרי רבינו הקדוש כמו שעשה רבינו הקדוש בדברי כל הבאים אחרי משה.</p>
+                <p>וכלל כל דברי המדברים ושכל המתבוננים ופירוש המפרשים ודקדוק ההלכות, וקבצם וכבש הכל בחכמתו ובמה שנתן לו הקדוש ברוך הוא מנפש פשוטה וכבוד החכמה, וחיבר התלמוד. והיתה כוונתו בו ארבעה דברים:</p>
+                <p><b>האחד:</b> פירוש המשנה וכל מה שנפל בה מדברים המכילים עניינים רבים, ממחלוקת הפירושים וטענות כל מפרש על חברו וגילוי טענת האמת; וזה ראשית הכוונות שנתכוון.</p>
+                <p><b>והשני:</b> פסק הדין על דעת האחד משני החולקים שנחלקו בדברי המשנה או בפירושה, או בחידושים שנתחדשו בה ושחיברו עליה.</p>
+                <p><b>והשלישי:</b> בחידושי העניינים שהוציאו חכמי כל דור מן המשנה, וגילוי העיקר והראיות שהורו בהן וסמכו עליהן התנאים המדברים על דברי המשנה, עד שנסדר מדבריהם מה שנסדר, והגזרות והתקנות העשויות מאחרי רבינו הקדוש עד המחבר הזה.</p>
+                <p><b>והרביעי:</b> דרשות (אגדות) שהן ראויות לפי עניין כל פרק שנזדמן להיות בו דרש.</p>
+              </blockquote>
+            </details>
+          </section>
+
+          <section class="source-excerpt">
+            <p class="source-excerpt-title">רש״י, סוכה יד ע״א — חז״ל נהגו לשבץ דינים שאין עליהם גמרא במקום הקרוב ביותר</p>
+            <details>
+              <summary>לקריאת דברי רש״י</summary>
+              <blockquote>
+                <p>שאלתי את מורי מגופה דמשנה דמייתי אגב גררא בשמעתין: מי שייך למיתני גופא כדגרסינן במימרות האמוראים? ואמר לי רבי: משום דהך משנה מן הטהרות, שאין מהם שום גמרא בעולם ולא מפורשת כשאר המשניות. לפיכך נוהג הש״ס לומר גופא כדי לפרש.</p>
+              </blockquote>
+            </details>
+          </section>
+
+          <section class="source-excerpt">
+            <p class="source-excerpt-title">רבי יצחק אבוהב, הקדמה למנורת המאור — על שיבוץ האגדות בתלמוד</p>
+            <details>
+              <summary>לקריאת דברי רבי יצחק אבוהב</summary>
+              <blockquote>
+                <p>כשהיה רצונם לדבר בכללי המצוות ובשכרם והבטחתם ובעונשם ובפחדם, היו מאריכים לדבר בו על דרך כלל, לפי שהוא צורך גדול ויסוד האמונה: לאיים לרשעים שיסורו מדרך רעה, ולהבטיח להולכים בדרך טובה — אולי ייכנסו מיראה לאהבה; ומכוונת קיבול שכר יבואו לעשותם לשמה, כשישיגו האמת.</p>
+                <p>וגם כן, כשהיו מדברים בחכמות עליונות, שהיו בקיאים רבים מהם, כמו שאמרו על רבן יוחנן בן זכאי, תלמיד קטן של הלל הזקן, שלא הניח דבר גדול ודבר קטן: דבר גדול — מעשה מרכבה; דבר קטן — הוויות דאביי ורבא. ובדבר גדול כזה היו מדברים בו ברמז לחכם ומבין מדעתו, וזהו שנקרא סתרי תורה.</p>
+                <p>וכראות רב אשי, מחבר התלמוד הבבלי, את כל העניינים הגדולים כאלו שהיו להם על פה, זולתי קצת דברים שהיו כתובים בזכירות ומפוזרים בדפין ובעלים — כי כמו שהיה צריך לחבר השמעתות לביאור המצוות והדינין, כך היה צריך לזכור הדרשות והמעשיות שאירעו בזמני קדמונינו, הראויים ללמד מהם הלכות ומוסרים ומדות, ונסים והבטחות ועניינים גדולים הצריכים לקיום האמונה, ועיקרים רבים שהם שורשה ועיקרה — חיברם בין ההלכות, וקרויים אגדות, כדי שלא יישכחו לעולם ועד, ויהיו לזיכרון לכל מעיין בם, להבין מהם כל מה שיוכל כפי כוח שכלו, ולדורשם לישראל להדריכם בדרך ישרה.</p>
+              </blockquote>
+            </details>
+          </section>
+
+          <section class="source-excerpt">
+            <p class="source-excerpt-title">הרב שלמה פישר, אוהל לאה ג עמ׳ 112 — מדוע סוגיות חנוכה נמצאות רק בבבלי</p>
+            <details>
+              <summary>לקריאת דברי הרב שלמה פישר</summary>
+              <blockquote>
+                <p>הטעם למה לא הוזכרה סוגיא דחנוכה בירושלמי הוא פשוט. דבירושלמי אין הסתעפות סוגיות כמו בבבלי, אלא הוא מתייחס תמיד ישירות לפירוש המשנה. ובבבלי ניכר שהושקעה עבודה לשבץ עניינים שאין להם גמרא (כגון עניני זרעים וטהרות) בתוך סוגיות שיש להם קצת שייכות. והוא משום דהבבלי סודר בעריכה וכוונה. מה שאין כן הירושלמי לא היתה לו עריכה סופית כנודע.</p>
+              </blockquote>
+            </details>
+          </section>
+
+          <button id="confirmTalmudAdditions" class="talmud-additions-confirm" type="button">הבנתי, המשיכו לתוספות</button>
+        </div>
+      </dialog>
+    </section>
+
+    <section id="cross-themes" class="screen cross-screen" data-screen aria-labelledby="crossTitle">
+      <div class="section-heading reveal">
+        <h2 id="crossTitle">נושאי רוחב <strong>לאורך המסכת</strong></h2>
+        <p>בתוך הדיון המקומי נפתחים נושאים גדולים. הם אינם פרק בפני עצמו, אבל הם יוצרים רשת המחברת חלקים רחוקים במסכת.</p>
+      </div>
+      <div class="cross-split reveal">
+        <div id="crossThemeGrid" class="cross-list" aria-label="נושאי הרוחב"></div>
+        <aside class="cross-sea" aria-label="הנושא שנבחר">
+          <div class="sea-capsule"><img id="crossImage" src="assets/cross-theme-halakhic-opposites.png" alt="פרה ועגלה צעירה עומדות זו לצד זו בשדה" width="1536" height="1024"></div>
+          <p class="sea-line" id="crossWhere" aria-live="polite"></p>
+        </aside>
+      </div>
+      <a class="cross-study-link reveal" href="#isur-heter-map">
+        <span><strong>יסודות איסור והיתר</strong><small>בשר בחלב, מליחה ותערובות מופיעים בחלקים שונים במסכת.</small></span>
+        <span class="row-go" aria-hidden="true">←</span>
+        <span class="sr-only">למפת סוגיות יסוד באיסור והיתר בסיכום המסכת</span>
+      </a>
+    </section>
+
+    <section id="aggadah" class="screen aggadah-screen" data-screen aria-labelledby="aggadahTitle">
+      <div class="section-heading reveal">
+        <h2 id="aggadahTitle">עולם האגדה <strong>במסכת</strong></h2>
+        <p>כל 21 הסוגיות שסומנו במפורש בתוכן האתר בסוג „אגדה” — ללא סיווגים או תוספות חדשות.</p>
+      </div>
+      <div class="aggadah-toolbar reveal">
+        <label for="aggadahChapter">סינון לפי פרק</label>
+        <select id="aggadahChapter"><option value="all">כל הפרקים</option></select>
+        <p class="aggadah-count" id="aggadahCount" aria-live="polite"></p>
+      </div>
+      <div id="aggadahList" class="aggadah-list reveal"></div>
+      <p id="emptyAggadah" class="empty-state" hidden>לא נמצאו סוגיות בפרק זה.</p>
+    </section>
+
+    <section id="summary" class="screen summary-screen" data-screen aria-labelledby="summaryTitle">
+      <div class="section-heading reveal">
+        <h2 id="summaryTitle">מפת המסע <strong>השלמה</strong></h2>
+        <p>בכל תחנה מופיעים מספר הסוגיות הכולל, מספר סוגיות האגדה ונושאי הרוחב של הפרק. לחצו על פרק כדי לראות את רשימת הנושאים המלאה, לרבות הנושאים שבאו בדרך אגב.</p>
+      </div>
+      <div class="summary-stats reveal" aria-label="נתוני סיכום">
+        <div aria-label="12 פרקים"><b class="count-up" data-target="12" aria-hidden="true">12</b><span>פרקים</span></div>
+        <div aria-label="141 דפים"><b class="count-up" data-target="141" aria-hidden="true">141</b><span>דפים</span></div>
+        <div aria-label="713 סוגיות בסך הכול"><b class="count-up" data-target="713" aria-hidden="true">713</b><span>סוגיות סך הכול</span></div>
+        <div aria-label="21 סוגיות אגדה"><b class="count-up" data-target="21" aria-hidden="true">21</b><span>סוגיות אגדה</span></div>
+        <div aria-label="143 סוגיות דרך אגב"><b class="count-up" data-target="143" aria-hidden="true">143</b><span>סוגיות דרך אגב</span></div>
+      </div>
+      <div class="summary-table reveal">
+        <div class="summary-head" aria-hidden="true"><span>פרק</span><span>סוגיות</span><span>אגדה</span><span>נושא רוחב</span><span></span></div>
+        <div id="summaryGrid" class="summary-grid" aria-label="סיכום פרקי מסכת חולין"></div>
+      </div>
+      <section id="isur-heter-map" class="isur-heter-map reveal" aria-labelledby="isurHeterTitle">
+        <div class="isur-heter-heading">
+          <p class="eyebrow">מסלול לימוד</p>
+          <h3 id="isurHeterTitle">סוגיות יסוד <strong>באיסור והיתר</strong></h3>
+          <p>לימוד מסכת חולין יכול לשמש מבוא ממוקד לשלושה תחומים מרכזיים באיסור והיתר. המפה מפנה אל הנושאים הראשיים המתאימים בכל פרק.</p>
+        </div>
+        <div class="isur-heter-grid">
+          <article class="isur-heter-card"><h4>בשר בחלב</h4><p><strong>פרק כל הבשר</strong></p><p><strong>נושא ראשי 1:</strong> בשר בחלב — היקף האיסור והפרדה</p><p><strong>נושא ראשי 3:</strong> הנחת בשר וגבינה בסמיכות</p><p><strong>נושא ראשי 4:</strong> בשר שהתבשל עם חלב</p><p><strong>נושא ראשי 7:</strong> בשר בחלב — הבשר והחלב שנאסרו</p><p><strong>נושא ראשי 8:</strong> קיבת בהמה והפורש ממנה</p></article>
+          <article class="isur-heter-card"><h4>מליחה</h4><p><strong>פרק כל הבשר</strong></p><p><strong>נושא ראשי 6:</strong> בליעה ופליטה בבשר — דם וטעם</p></article>
+          <article class="isur-heter-card"><h4>תערובות</h4><p><strong>פרק גיד הנשה — נושא ראשי 6:</strong> איסור שנתן טעם בהיתר</p><p><strong>פרק כל הבשר — נושא ראשי 4:</strong> בשר שהתבשל עם חלב</p></article>
+        </div>
+      </section>
+      <section class="study-cta reveal" aria-labelledby="studyCtaTitle">
+        <h3 id="studyCtaTitle">עכשיו, כשהמפה בידיכם, <strong>הגיע הזמן להתחיל ללמוד.</strong></h3>
+          <a class="study-cta-button" href="../../%D7%AA%D7%99%D7%A7%D7%99%D7%99%D7%AA%20%D7%A2%D7%91%D7%95%D7%93%D7%94%20%D7%91%D7%A7%D7%95%D7%93%D7%A7%D7%A1/frontend/ta-shma-demo-four-paths-ux-work.html?view=library&amp;seder=%D7%A7%D7%93%D7%A9%D7%99%D7%9D" aria-label="צאו למסע במסכת חולין בסדר קדשים">
+          <span>צאו למסע במסכת חולין!</span><b class="study-cta-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></b>
+        </a>
+      </section>
+      <dialog id="chapterTopicsDialog" class="chapter-topics-dialog" aria-labelledby="chapterTopicsTitle">
+        <div class="chapter-topics-dialog-inner">
+          <button id="closeChapterTopics" class="dialog-close" type="button" aria-label="סגירת חלון נושאי הפרק"></button>
+          <div id="chapterTopicsContent"></div>
+        </div>
+      </dialog>
+    </section>
+  </main>
+
+  <footer>
+    <p>מסע במסכת חולין · אבטיפוס היכרות חזותי</p>
+    <a href="#opening">חזרה להתחלה <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+  </footer>
+
+  <button class="accessibility-launch" id="openAccessibilityTools" type="button" aria-haspopup="dialog" aria-label="פתיחת אפשרויות נגישות" data-tooltip="אפשרויות נגישות">
+    <svg class="accessibility-launch-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="4.5" r="2" fill="currentColor"></circle>
+      <path d="M5 8.5c4.6 1.4 9.4 1.4 14 0M12 7v5.2M12 12.2 7.8 20M12 12.2l4.2 7.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+
+  <dialog id="accessibilityToolsDialog" class="a11y-dialog" aria-labelledby="accessibilityToolsTitle">
+    <div class="a11y-dialog-inner">
+      <button id="closeAccessibilityTools" class="dialog-close" type="button" aria-label="סגירת אפשרויות הנגישות"></button>
+      <h3 id="accessibilityToolsTitle">אפשרויות נגישות</h3>
+      <p class="dialog-context">ההתאמות חלות על הביקור הנוכחי.</p>
+      <div class="accessibility-tools">
+        <button id="increaseText" type="button">הגדלת התצוגה</button>
+        <button id="decreaseText" type="button">הקטנת התצוגה</button>
+        <div class="accessibility-scale" id="accessibilityScale" role="status" aria-live="polite">גודל תצוגה: 100%</div>
+        <button id="toggleContrast" type="button" aria-pressed="false">ניגודיות גבוהה</button>
+        <button id="toggleHighlights" type="button" aria-pressed="false">הדגשת קישורים וכפתורים</button>
+        <button id="resetAccessibility" type="button">איפוס התאמות</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="mishnah-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
