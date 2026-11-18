@@ -5,11 +5,14 @@
   const list = document.getElementById("aggadah-list");
   if (!filter || !count || !list) return;
 
+  const chapterLetters = ["א׳", "ב׳", "ג׳", "ד׳", "ה׳", "ו׳", "ז׳", "ח׳", "ט׳"];
+  const chapterLabel = number => `פרק ${chapterLetters[number - 1] || number}`;
+
   const chapters = new Map(entries.map(entry => [entry.chapter, entry.chapterTitle]));
   for (const [number, title] of [...chapters].sort((a, b) => a[0] - b[0])) {
     const option = document.createElement("option");
     option.value = String(number);
-    option.textContent = `פרק ${number} · ${title}`;
+    option.textContent = `${chapterLabel(number)} · ${title}`;
     filter.append(option);
   }
 
@@ -76,7 +79,7 @@
       }
       const ref = document.createElement("span");
       ref.className = "intro-aggadah-ref";
-      ref.textContent = `פרק ${entry.chapter} · ${entry.daf}`;
+      ref.textContent = `${chapterLabel(entry.chapter)} · ${entry.daf}`;
       card.append(heading, summary, types, ref);
       return card;
     });
